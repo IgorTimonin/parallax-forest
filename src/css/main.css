@@ -44,11 +44,11 @@ body {
   position: absolute;
   z-index: 100;
   width: 100%;
-  height: calc(var(--index) * 10);
-  background-image: url(../img/ground.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: url(../img/ground.png);
+  height: calc(var(--index) * 10);
   bottom: calc(var(--index) * -4.5);
 }
 
@@ -62,7 +62,7 @@ body {
   overflow: hidden;
 }
 
-.layers__header {
+.layer__header {
   z-index: 1;
   transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
   transition: var(--transition);
@@ -116,7 +116,7 @@ body {
 
 .dungeon {
   --text-transform: translate3d(0, calc(var(--scrollTop) / -17.5), 0);
-  background-image: url(../img/dungeon.jpg);
+  /* background-image: url(../img/dungeon.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -126,9 +126,74 @@ body {
   justify-content: center;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   top: -1px;
 	z-index: 10;
+}
+
+.floor-1 {
+  background-image: url(../img/dungeon-1-middle.png);
+  position: relative;
+  z-index: 2;
+}
+
+.floor-1__back {
+  background-image: url(../img/dungeon-1-back.png);
+  background-repeat: no-repeat;
+  transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+  z-index: 1;
+}
+.floor-1__middle {
+  background-image: url(../img/dungeon-1-mid.png);
+  background-repeat: no-repeat;
+  transform: translate3d(0, calc(var(--scrollTop) / 19), 0);
+}
+
+.floor-1__front {
+  background-image: url(../img/dungeon-1-front.png);
+  background-repeat: no-repeat;
+  transform: translate3d(0, calc(var(--scrollTop) / 0.01), 0);
+  z-index: 2;
+}
+
+.floor-1__content {
+  z-index: 2;
+}
+
+.floor-2 {
+  background-image: url(../img/dungeon.jpg);
+  z-index: 5 ;
+}
+
+.floor-3 {
+  background-image: url(../img/dungeon2.jpg);
+  z-index: 1;
+}
+
+.floor-1::after {
+  content: '';
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/ground.png);
+  height: calc(var(--index) * 10);
+  bottom: calc(var(--index) * -4.5);
+}
+
+.floor-2::after {
+  content: '';
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/ground.png);
+  height: calc(var(--index) * 10);
+  bottom: calc(var(--index) * -4.5);
 }
 
 .dungeon__content {
@@ -177,14 +242,6 @@ body {
 .footer__author {
   font-size: calc(var(--index) * 0.55);
 }
-
-/* .header__player {
-  background-color: transparent;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 5;
-} */
 
 .audio__play-btn {
   position: fixed;

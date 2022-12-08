@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,15 +21,13 @@
     <div class="wrapper">
       <div class="content">
         <header class="header">
-          <div class="header__player">
             <audio
               class="audio"
               src="./src/audio/alexander-nakarada-fairy-of-the-forest.mp3"
               id="audio"
             ></audio>
-          </div>
           <div class="layers">
-            <div class="layers__header">
+            <div class="layer__header">
               <h2 class="layers__caption">Добро пожаловать в</h2>
               <h1 class="layer__title">Волшебный лес</h1>
             </div>
@@ -38,8 +36,19 @@
             <div class="layer layers__front"></div>
           </div>
         </header>
-
-        <article class="dungeon">
+        <section class="floor-1 dungeon">
+          <div class="floor-1__content">
+            <h2 class="dungeon__title">где под землёй </h2>
+            <p class="dungeon__text">
+              таятся несметные чудеса и опасности
+            </p>
+          </div>
+          <div class="layer floor-1__base"></div>
+            <div class="layer floor-1__back"></div>
+            <div class="layer floor-1__middle"></div>
+            <div class="layer floor-1__front"></div>
+        </section>
+        <section class="floor-2 dungeon">
           <div class="dungeon__content">
             <h2 class="dungeon__title">to be continued</h2>
             <p class="dungeon__text">
@@ -49,7 +58,18 @@
               delectus obcaecati hic, rem quo impedit?
             </p>
           </div>
-        </article>
+        </section>
+        <section class="floor-3 dungeon">
+          <div class="dungeon__content">
+            <h2 class="dungeon__title">to be continued</h2>
+            <p class="dungeon__text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perspiciatis odit neque quod commodi fuga accusantium obcaecati
+              sequi unde dolorem, error ipsa ea et ullam delectus. Aliquam
+              delectus obcaecati hic, rem quo impedit?
+            </p>
+          </div>
+        </section>
 
         <footer class="footer">
           <div class="footer__container">
