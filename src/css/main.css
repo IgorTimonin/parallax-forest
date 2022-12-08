@@ -5,9 +5,11 @@
 }
 
 :root {
---main-text-color: #fff;
---bg-color: #010101;
---index: calc(1vw + 1vh);
+  --default-text-color: #fff;
+  --main-text-color: #e7e7e0;
+  --bg-color: #010101;
+  --index: calc(1vw + 1vh);
+
 }
 
 @font-face {
@@ -32,6 +34,19 @@ body {
   position: relative;
 }
 
+.header::after {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: calc(var(--index) * 10);
+  background-image: url(../img/ground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  bottom: calc(var(--index) * -4.5);
+}
+
 .layers {
   height: 100vh;
   display: flex;
@@ -48,7 +63,7 @@ body {
   text-transform: uppercase;
   will-change: transform;
   font-weight: 900;
-  color: #e7e7e0;
+  color: var(--main-text-color);
   text-shadow: 0 0 15px #9e7d35;
 }
 
@@ -74,23 +89,64 @@ body {
 
 .layers__base {
   background-image: url(../img/layer-base.png);
+  background-repeat: no-repeat;
   transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
   z-index: 0;
 }
 
 .layers__middle {
-background-image: url(../img/layer-middle.png);
-transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
-z-index: 2;
+  background-image: url(../img/layer-middle.png);
+  background-repeat: no-repeat;
+  transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
+  z-index: 2;
 }
 
 .layers__front {
-background-image: url(../img/layer-front.png);
-transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
-z-index: 3;
+  background-image: url(../img/layer-front.png);
+  background-repeat: no-repeat;
+  transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+  z-index: 3;
 }
 
 .dungeon {
+  --text-transform: translate3d(0, calc(var(--scrollTop) / -12), 0);
   background-image: url(../img/dungeon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dungeon__content {
+  color: var(--main-text-color);
+  position: relative;
+}
+
+.dungeon__title {
+  text-transform: uppercase;
+  font-size: calc(var(--index) * 1.8);
+  letter-spacing: calc(var(--index) / 7.5);
+  transform: var(--text-transform);
+  will-change: transform;
+}
+
+.dungeon__text {
+  font-size: calc(var(--index) * .9);
+  max-width: calc(var(--index) * 35);
+  margin-top: calc(var(--index) / 1.25);
+  transform: var(--text-transform);
+  will-change: transform;
+}
+
+.footer {
+}
+
+.footer__copyright {
+  font-size: calc(var(--index) * 0.75);
+  letter-spacing: calc(var(--index) / 37);
 }
