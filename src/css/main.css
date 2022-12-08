@@ -32,6 +32,7 @@ body {
 
 .content {
   will-change: transform;
+  position: relative;
 }
 
 .header {
@@ -49,15 +50,6 @@ body {
   background-size: cover;
   background-position: center;
   bottom: calc(var(--index) * -4.5);
-}
-
-.header__player {
-  background-color: transparent;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 5;
-
 }
 
 .layers {
@@ -165,9 +157,16 @@ body {
 
 .footer {
   display: flex;
+  justify-content:center;
+
+}
+.footer__container {
+  width: 90%;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:space-between;
   text-align: center;
+  letter-spacing: calc(var(--index) / 37);
 }
 
 .footer__copyright {
@@ -175,7 +174,23 @@ body {
   letter-spacing: calc(var(--index) / 37);
 }
 
+.footer__author {
+  font-size: calc(var(--index) * 0.55);
+}
+
+/* .header__player {
+  background-color: transparent;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+} */
+
 .audio__play-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
   height: 30px;
   width: 30px;
   border: none;

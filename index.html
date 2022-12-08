@@ -17,12 +17,16 @@
     <script src="src/js/app.js" defer></script>
   </head>
   <body>
+    <button class="audio__control audio__play-btn" id="playBtn"></button>
     <div class="wrapper">
       <div class="content">
         <header class="header">
           <div class="header__player">
-            <audio class="audio" autoplay src="./src/audio/alexander-nakarada-fairy-of-the-forest.mp3" id="audio"></audio>
-            <button class="audio__control audio__play-btn" id="playBtn"></button>
+            <audio
+              class="audio"
+              src="./src/audio/alexander-nakarada-fairy-of-the-forest.mp3"
+              id="audio"
+            ></audio>
           </div>
           <div class="layers">
             <div class="layers__header">
@@ -48,7 +52,13 @@
         </article>
 
         <footer class="footer">
-          <div class="footer__copyright">©IgorTimonin 2022</div>
+          <div class="footer__container">
+            <span class="footer__copyright">© IgorTimonin 2022</span>
+            <span class="footer__author"
+              >music: Fairy Of The Forest by Alexander Nakarada |
+              https://www.serpentsoundstudios.com</span
+            >
+          </div>
         </footer>
       </div>
     </div>
