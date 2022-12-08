@@ -51,6 +51,15 @@ body {
   bottom: calc(var(--index) * -4.5);
 }
 
+.header__player {
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+
+}
+
 .layers {
   height: 100vh;
   display: flex;
@@ -75,7 +84,7 @@ body {
 .layers__caption {
   font-size: calc(var(--index) / 1.175);
   letter-spacing: calc(var(--index) / 3.25);
-  margin-top: calc(var(--index) * -4.5);
+  margin-top: calc(var(--index) * -6);
 }
 
 .layer__title {
@@ -166,3 +175,16 @@ body {
   letter-spacing: calc(var(--index) / 37);
 }
 
+.audio__play-btn {
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../img/play-min.png);
+  background-size: cover;
+  text-shadow: 0 0 15px #9e7d35;
+}
+
+.btn-pause {
+  background-image: url(../img/pause-min.png);
+}
