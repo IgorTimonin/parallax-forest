@@ -9,7 +9,7 @@
   --main-text-color: #e7e7e0;
   --bg-color: #010101;
   --index: calc(1vw + 1vh);
-
+  --transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 
 @font-face {
@@ -28,6 +28,10 @@ body {
   color: var(--main-text-color);
   font-family: raleway_f, sans-serif;
   line-height: 1.55;
+}
+
+.content {
+  will-change: transform;
 }
 
 .header {
@@ -60,6 +64,7 @@ body {
 .layers__header {
   z-index: 1;
   transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  transition: var(--transition);
   text-transform: uppercase;
   will-change: transform;
   font-weight: 900;
@@ -85,6 +90,7 @@ body {
   background-size: cover;
   background-position: center;
   will-change: transform;
+  transition: var(--transition);
 }
 
 .layers__base {
@@ -125,6 +131,7 @@ body {
 .dungeon__content {
   color: var(--main-text-color);
   position: relative;
+  transition: var(--transition);
 }
 
 .dungeon__title {
@@ -150,3 +157,4 @@ body {
   font-size: calc(var(--index) * 0.75);
   letter-spacing: calc(var(--index) / 37);
 }
+

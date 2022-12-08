@@ -8,31 +8,45 @@
     <title>Parralax Forest</title>
 
     <link rel="stylesheet" href="src/css/main.css" />
+
+    <!-- подключение плавной прокрутки -->
+    <script src="src/libs/gsap/gsap.min.js" defer></script>
+    <script src="src/libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="src/libs/gsap/ScrollSmoother.min.js" defer></script>
+
     <script src="src/js/app.js" defer></script>
   </head>
   <body>
+    <div class="wrapper">
+      <div class="content">
+        <header class="header">
+          <div class="layers">
+            <div class="layers__header">
+              <h2 class="layers__caption">Welcome to Parallax</h2>
+              <h1 class="layer__title">Fairy Forest</h1>
+            </div>
+            <div class="layer layers__base"></div>
+            <div class="layer layers__middle"></div>
+            <div class="layer layers__front"></div>
+          </div>
+        </header>
 
-    <header class="header">
-      <div class="layers">
-        <div class="layers__header">
-          <h2 class="layers__caption">Welcome to Parallax</h2>
-          <h1 class="layer__title">Fairy Forest</h1>
-        </div>
-        <div class="layer layers__base"></div>
-        <div class="layer layers__middle"></div>
-        <div class="layer layers__front"></div>
+        <article class="dungeon">
+          <div class="dungeon__content">
+            <h2 class="dungeon__title">to be continued</h2>
+            <p class="dungeon__text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perspiciatis odit neque quod commodi fuga accusantium obcaecati
+              sequi unde dolorem, error ipsa ea et ullam delectus. Aliquam
+              delectus obcaecati hic, rem quo impedit?
+            </p>
+          </div>
+        </article>
+
+        <footer class="footer">
+          <div class="footer__copyright">©TimoninIgor 2022</div>
+        </footer>
       </div>
-    </header>
-
-    <article class="dungeon">
-      <div class="dungeon__content">
-        <h2 class="dungeon__title">to be continued</h2>
-        <p class="dungeon__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis odit neque quod commodi fuga accusantium obcaecati sequi unde dolorem, error ipsa ea et ullam delectus. Aliquam delectus obcaecati hic, rem quo impedit?</p>
-      </div>
-    </article>
-
-    <footer class="footer">
-      <div class="footer__copyright">©TimoninIgor 2022</div>
-    </footer>
+    </div>
   </body>
 </html>
