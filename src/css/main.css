@@ -6,10 +6,15 @@
 
 a {
   text-decoration: none;
+  transition: var(--transition);
 }
 
-a:visited {
+a:visited, :focus, :active {
   color: var(--default-text-color);
+}
+
+a:hover {
+  transform: scale(1.1);
 }
 
 :root {
@@ -238,6 +243,9 @@ body {
 @media screen and (max-width: 500px) {
   .dungeon__text {
     max-width: calc(var(--index) * 29);
+  }
+  .footer__container {
+    flex-direction: column;
   }
 }
 
