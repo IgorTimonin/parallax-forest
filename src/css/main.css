@@ -203,6 +203,11 @@ body {
 .dungeon__content {
   color: var(--main-text-color);
   position: relative;
+  margin-top: 100px;
+}
+
+.floor__content {
+  margin-top: 100px;
 }
 
 .dungeon__title {
@@ -212,15 +217,17 @@ body {
   transform: var(--text-transform);
   transition: var(--transition);
   will-change: transform;
+  text-shadow: 0 0 15px #4E6E6D;
 }
 
 .dungeon__text {
-  font-size: calc(var(--index) * 0.9);
+  font-size: calc(var(--index) * 1.3);
   max-width: calc(var(--index) * 35);
-  margin-top: calc(var(--index) / 1.25);
+  margin-top: calc(var(--index) / 0.5);
   transform: var(--text-transform);
   transition: var(--transition);
   will-change: transform;
+  text-shadow: 0 0 15px #4E6E6D;
 }
 
 @media screen and (max-width: 500px) {
