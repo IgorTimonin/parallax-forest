@@ -5,6 +5,7 @@
 }
 
 a {
+  color: var(--default-text-color);
   text-decoration: none;
   transition: var(--transition);
 }
