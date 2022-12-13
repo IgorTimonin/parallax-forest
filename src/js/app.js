@@ -13,16 +13,7 @@ ScrollSmoother.create({
   content: '.content',
 });
 
-//управление плеером
-// const audio = new Audio(
-//   './src/audio/alexander-nakarada-fairy-of-the-forest.mp3'
-// );
-
-// audio.addEventListener('canplaythrough', () => {
-//   audio.play();
-// });
-
-// const audio = document.getElementById('audio');
+//плеер на страницу
 const playBtn = document.getElementById('playBtn');
 
 function playPause() {
