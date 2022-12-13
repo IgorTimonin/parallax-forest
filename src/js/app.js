@@ -4,6 +4,10 @@ window.addEventListener('scroll', (e) => {
     '--scrollTop',
     `${this.scrollY}px`
   );
+  document.documentElement.style.setProperty(
+    '--scrollData',
+    this.scrollY
+  );
 });
 
 //подключение плагинов gsap

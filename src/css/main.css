@@ -69,6 +69,52 @@ body {
   bottom: calc(var(--index) * -4.5);
 }
 
+.mouse {
+  color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 101;
+  opacity: calc(1 - (var(--scrollData) * 0.005));
+  text-shadow: 0 0 15px #9e7d35;
+}
+.mouse-scroll {
+  position: relative;
+  width: 25px;
+  height: 40px;
+  border: 2px solid #f2f2f2;
+  border-radius: 60px;
+  overflow: hidden;
+}
+.mouse-scroll:before {
+  content: '';
+  opacity: 1;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 7px;
+  left: 50%;
+  border-radius: 50%;
+  background: #f2f2f2;
+  transform: translateX(-50%);
+  -webkit-animation: wheel 1.2s infinite;
+  animation: wheel 1.2s infinite;
+}
+
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
+}
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
+}
+
 .layers {
   height: 100vh;
   display: flex;
@@ -233,7 +279,7 @@ body {
   transform: var(--text-transform);
   transition: var(--transition);
   will-change: transform;
-  text-shadow: 0 0 15px #4e6e6d;
+  text-shadow: 0 0 15px #1ec2bc;
 }
 
 .dungeon__text {
@@ -245,7 +291,8 @@ body {
   transform: var(--text-transform);
   transition: var(--transition);
   will-change: transform;
-  text-shadow: 0 0 15px #4e6e6d;
+  text-shadow: 0 0 15px #1ec2bc;
+  font-style: italic;
 }
 
 .dungeon__author {
