@@ -270,7 +270,19 @@ body {
 .floor__content {
   margin-top: 10px;
   z-index: 1;
+  transition: opacity 2s, transform 2s;
+  /* opacity: calc((var(--scrollData) * 0.00075)); */
 }
+
+.floor__content_show {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+/* .floor__content_animation {
+  opacity: 0;
+  transform: translateY(100%);
+} */
 
 .dungeon__title {
   text-transform: uppercase;
