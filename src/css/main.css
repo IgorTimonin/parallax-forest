@@ -241,7 +241,7 @@ body {
   flex-direction: column;
   font-size: calc(var(--index) * 1.3);
   max-width: calc(var(--index) * 35);
-  margin-top: calc(var(--index) / 0.5);
+  margin-top: calc(var(--index) / 1);
   transform: var(--text-transform);
   transition: var(--transition);
   will-change: transform;
