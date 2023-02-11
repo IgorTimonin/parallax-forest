@@ -4,10 +4,7 @@ window.addEventListener('scroll', (e) => {
     '--scrollTop',
     `${this.scrollY}px`
   );
-  document.documentElement.style.setProperty(
-    '--scrollData',
-    this.scrollY
-  );
+  document.documentElement.style.setProperty('--scrollData', this.scrollY);
 });
 
 //подключение плагинов gsap
@@ -17,7 +14,7 @@ ScrollSmoother.create({
   content: '.content',
 });
 
-//плеер на страницу
+//плеер на странице
 const playBtn = document.getElementById('playBtn');
 
 function playPause() {
@@ -28,3 +25,28 @@ function playPause() {
 }
 
 playBtn.addEventListener('click', playPause);
+
+//Появление сообщений
+window.onload = () => {
+  const options = {
+    root: null,
+    rootMatgin: '0px',
+    threshold: 0.5,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const lazyText = entry.target;
+        console.log(lazyText);
+        lazyText.classList.add('floor__content_show');
+        observer.unobserve(lazyText);
+      }
+    });
+  }, options);
+
+  const arr = document.querySelectorAll('floor__content');
+  arr.forEach((i) => {
+    observer.observe(i);
+  });
+};

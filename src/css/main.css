@@ -192,13 +192,8 @@ body {
   top: -1px;
 }
 
-/* .floor-1 {
-  position: relative;
-} */
-
 .floor-1__base {
   background-image: url(../img/dungeon-1-fon.png);
-  /* transform: translate3d(0, calc((var(--scrollTop) - 1200px) / 1.6), 0); */
   z-index: 0;
 }
 
@@ -210,13 +205,10 @@ body {
 
 .floor-1__middle {
   background-image: url(../img/dungeon-1-mid.png);
-  /* transform: translate3d(0, calc((var(--scrollTop) - 1200px) / 1.8), 0); */
-  /* z-index: 1; */
 }
 
 .floor-1__front {
   background-image: url(../img/dungeon-1-front.png);
-  /* transform: translate3d(0, calc((var(--scrollTop) - 1400px) / 5), 0); */
 }
 
 .floor-2 {
@@ -270,6 +262,12 @@ body {
 .floor__content {
   margin-top: 10px;
   z-index: 1;
+  transition: opacity 2s, transform 2s;
+}
+
+.floor__content_show {
+  opacity: 1;
+  transform: translateY(0%);
 }
 
 .dungeon__title {
