@@ -14,7 +14,7 @@ ScrollSmoother.create({
   content: '.content',
 });
 
-//плеер на страницу
+//плеер на странице
 const playBtn = document.getElementById('playBtn');
 
 function playPause() {
@@ -50,17 +50,3 @@ window.onload = () => {
     observer.observe(i);
   });
 };
-
-// function onEntry(entry) {
-//   entry.forEach((change) => {
-//     if (change.isIntersecting) {
-//       change.target.classList.add('floor__content_show');
-//     }
-//   });
-// }
-// let options = { threshold: [0.5] };
-// let observer = new IntersectionObserver(onEntry, options);
-// let elements = document.querySelectorAll('.floor__content_animation');
-// for (let elm of elements) {
-//   observer.observe(elm);
-// };
