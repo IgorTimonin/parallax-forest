@@ -27,26 +27,26 @@ function playPause() {
 playBtn.addEventListener('click', playPause);
 
 //Появление сообщений
-window.onload = () => {
-  const options = {
-    root: null,
-    rootMatgin: '0px',
-    threshold: 0.5,
-  };
+// window.onload = () => {
+//   const options = {
+//     root: null,
+//     rootMatgin: '0px',
+//     threshold: 0.5,
+//   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const lazyText = entry.target;
-        console.log(lazyText);
-        lazyText.classList.add('floor__content_show');
-        observer.unobserve(lazyText);
-      }
-    });
-  }, options);
+//   const observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         const lazyText = entry.target;
+//         console.log(lazyText);
+//         lazyText.classList.add('floor__content_show');
+//         observer.unobserve(lazyText);
+//       }
+//     });
+//   }, options);
 
-  const arr = document.querySelectorAll('floor__content');
-  arr.forEach((i) => {
-    observer.observe(i);
-  });
-};
+//   const arr = document.querySelectorAll('floor__content');
+//   arr.forEach((i) => {
+//     observer.observe(i);
+//   });
+// };

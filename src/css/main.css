@@ -333,12 +333,17 @@ body {
   letter-spacing: calc(var(--index) / 37);
 }
 
-.footer__copyright:hover {
-  text-shadow: 0 0 15px #9e7d35;
-}
-
 .footer__author {
   font-size: calc(var(--index) * 0.55);
+}
+
+.footer__link {
+  padding-right: 1rem;
+}
+
+.footer__link:hover {
+  color: #b1dbde;
+  text-shadow: #52fffc 1px 0 5px;
 }
 
 .audio__play-btn {
