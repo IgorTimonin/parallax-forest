@@ -209,22 +209,6 @@ body {
   background-image: url(../img/dungeon-1-front.png);
 }
 
-.floor-2 {
-  background-image: url(../img/dungeon.jpg);
-  z-index: 5;
-}
-
-.floor-3 {
-  background-image: url(../img/dungeon2.jpg);
-  z-index: 1;
-  position: relative;
-}
-
-.floor-3__back {
-  background-image: url(../img/dungeon2-stone.png);
-  z-index: 1;
-}
-
 .floor-1::after {
   content: '';
   position: absolute;
@@ -251,6 +235,22 @@ body {
   bottom: calc(var(--index) * -4.5);
 }
 
+.floor-2 {
+  background-image: url(../img/dungeon.jpg);
+  z-index: 5;
+}
+
+.floor-3 {
+  background-image: url(../img/dungeon2.jpg);
+  z-index: 1;
+  position: relative;
+}
+
+.floor-3__back {
+  background-image: url(../img/dungeon2-stone.png);
+  z-index: 1;
+}
+
 .dungeon__content {
   color: var(--main-text-color);
   position: relative;
@@ -264,7 +264,7 @@ body {
 
 .dungeon__title {
   text-transform: uppercase;
-  font-size: calc(var(--index) * 1.8);
+  font-size: calc(var(--index) * 1.5);
   letter-spacing: calc(var(--index) / 7.5);
   will-change: transform;
   text-shadow: 0 0 15px #1ec2bc;
@@ -273,7 +273,7 @@ body {
 .dungeon__text {
   display: flex;
   flex-direction: column;
-  font-size: calc(var(--index) * 1.3);
+  font-size: calc(var(--index) * 1.1);
   max-width: calc(var(--index) * 35);
   margin-top: calc(var(--index) / 1);
   transition: none;
@@ -355,3 +355,19 @@ body {
 .btn-pause {
   background-image: url(../img/pause-min.png);
 }
+
+.video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: .6;
+}
+
+.floor-3__video {
+opacity: .7;
+}
+
+

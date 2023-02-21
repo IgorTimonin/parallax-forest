@@ -25,7 +25,7 @@ console.log(textItems);
       item,
       { y: 80, opacity: 0 },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 0.8,
         scrollTrigger: {
           trigger: item,
           start: '0 70%',
