@@ -2,6 +2,11 @@ let particles = document.querySelectorAll('.particles'),
 		radius = 1.35,
 		number = 200
 
+    if (window.innerWidth < 500) {
+      radius = 1;
+      number = 100;
+    }
+
 particles.forEach(node => {
 
 	let color = node.dataset.color

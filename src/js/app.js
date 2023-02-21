@@ -18,7 +18,6 @@ ScrollSmoother.create({
 
 //появление текста
 let textItems = gsap.utils.toArray('.floor__content');
-console.log(textItems);
 
   textItems.forEach((item) => {
     gsap.fromTo(
