@@ -3,6 +3,13 @@
 
 <image src="/src/img/parallaxForest.jpg" alt="скриншот страницы проекта">
 
+*обязательно включите музыку! (верхнем правый угол)*
+
+Особенности:
+- параллакс эффект;
+- эффект летающих частиц (святлячки);
+- эффект тумана;
+
 ссылка на страницу: https://parallax-forest-two.vercel.app/
 
 Использованая музыка: Alexander Nakarada - Fairy of the forest
