@@ -7,7 +7,6 @@
 a {
   color: var(--default-text-color);
   text-decoration: none;
-  transition: var(--transition);
 }
 
 a:visited,
@@ -179,7 +178,6 @@ body {
 }
 
 .dungeon {
-  --text-transform: translate3d(0, calc(var(--scrollTop) / -50), 0);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -211,22 +209,6 @@ body {
   background-image: url(../img/dungeon-1-front.png);
 }
 
-.floor-2 {
-  background-image: url(../img/dungeon.jpg);
-  z-index: 5;
-}
-
-.floor-3 {
-  background-image: url(../img/dungeon2.jpg);
-  z-index: 1;
-  position: relative;
-}
-
-.floor-3__back {
-  background-image: url(../img/dungeon2-stone.png);
-  z-index: 1;
-}
-
 .floor-1::after {
   content: '';
   position: absolute;
@@ -253,6 +235,22 @@ body {
   bottom: calc(var(--index) * -4.5);
 }
 
+.floor-2 {
+  background-image: url(../img/dungeon.jpg);
+  z-index: 5;
+}
+
+.floor-3 {
+  background-image: url(../img/dungeon2.jpg);
+  z-index: 1;
+  position: relative;
+}
+
+.floor-3__back {
+  background-image: url(../img/dungeon2-stone.png);
+  z-index: 1;
+}
+
 .dungeon__content {
   color: var(--main-text-color);
   position: relative;
@@ -262,20 +260,12 @@ body {
 .floor__content {
   margin-top: 10px;
   z-index: 1;
-  transition: opacity 2s, transform 2s;
-}
-
-.floor__content_show {
-  opacity: 1;
-  transform: translateY(0%);
 }
 
 .dungeon__title {
   text-transform: uppercase;
-  font-size: calc(var(--index) * 1.8);
+  font-size: calc(var(--index) * 1.5);
   letter-spacing: calc(var(--index) / 7.5);
-  transform: var(--text-transform);
-  transition: var(--transition);
   will-change: transform;
   text-shadow: 0 0 15px #1ec2bc;
 }
@@ -283,11 +273,10 @@ body {
 .dungeon__text {
   display: flex;
   flex-direction: column;
-  font-size: calc(var(--index) * 1.3);
+  font-size: calc(var(--index) * 1.1);
   max-width: calc(var(--index) * 35);
   margin-top: calc(var(--index) / 1);
-  transform: var(--text-transform);
-  transition: var(--transition);
+  transition: none;
   will-change: transform;
   text-shadow: 0 0 15px #1ec2bc;
   font-style: italic;
@@ -306,6 +295,9 @@ body {
   }
   .footer__container {
     flex-direction: column;
+  }
+  .footer__link {
+    font-size: var(--index);
   }
 }
 
@@ -333,12 +325,17 @@ body {
   letter-spacing: calc(var(--index) / 37);
 }
 
-.footer__copyright:hover {
-  text-shadow: 0 0 15px #9e7d35;
-}
-
 .footer__author {
   font-size: calc(var(--index) * 0.55);
+}
+
+.footer__link {
+  padding-right: 1rem;
+}
+
+.footer__link:hover {
+  color: #dbfdff;
+  text-shadow: #52fffc 1px 0 5px;
 }
 
 .audio__play-btn {
@@ -358,3 +355,19 @@ body {
 .btn-pause {
   background-image: url(../img/pause-min.png);
 }
+
+.video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: .6;
+}
+
+.floor-3__video {
+opacity: .7;
+}
+
+
